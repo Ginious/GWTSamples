@@ -1,0 +1,31 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+
+	<ui:style>
+	.content {
+		margin-left: 5px;
+		margin-top: 15px;
+	}
+	</ui:style>
+
+	<b:Column size="12">
+		<b:Row addStyleNames="{style.content}">
+			<b:Column size="1">
+				<b:Label text="Feld A" />
+			</b:Column>
+			<b:Column size="3">
+				<b:TextBox placeholder="Feld A ..." />
+			</b:Column>
+		</b:Row>
+		<b:Row addStyleNames="{style.content}">
+			<b:Column size="1">
+				<b:Label text="Feld B" />
+			</b:Column>
+			<b:Column size="3">
+				<b:TextBox placeholder="Feld B ..." />
+			</b:Column>
+		</b:Row>
+	</b:Column>
+
+</ui:UiBinder> 

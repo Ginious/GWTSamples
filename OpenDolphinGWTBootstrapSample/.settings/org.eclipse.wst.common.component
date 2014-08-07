@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="OpenDolphinGWTBootstrapSample">
+        <wb-resource deploy-path="/WEB-INF/web.xml" source-path="/war/WEB-INF/web.xml"/>
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/" source-path="/war" tag="defaultRootSource"/>
+        <property name="context-root" value="GWTBootstrapODSample"/>
+        <property name="java-output-path" value="/OpenDolphinGWTBootstrapSample/target/classes"/>
+        <property name="component.exclusion.patterns" value="classes/,test-classes/,.generated/,maven-archiver/,maven-status/,WEB-INF/deploy/,surefire/,surefire-reports/,generated-sources/,WEB-INF/lib/*.jar"/>
+    </wb-module>
+</project-modules>

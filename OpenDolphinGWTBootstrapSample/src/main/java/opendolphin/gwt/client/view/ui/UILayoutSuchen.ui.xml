@@ -1,0 +1,38 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+
+	<ui:style>
+	.content {
+		margin-left: 5px;
+		margin-top: 15px;
+	}
+	
+	.outer {
+		background-color: #a0a0a0;
+	}
+	
+	.table {
+		background-color: #efefef;
+	}
+	
+	.details {
+		background-color: #f0f0f0;
+	}
+	</ui:style>
+
+	<b:Row>
+		<b:Column size="12">
+			<b:Row addStyleNames="{style.outer}" ui:field="rowSearch" />
+			<b:Row>
+				<b:Column size="6" addStyleNames="{style.table}">
+					<b:CellTable ui:field="tblData" />
+				</b:Column>
+
+				<b:Column size="6" addStyleNames="{style.details}"
+					ui:field="colDetails" />
+			</b:Row>
+		</b:Column>
+	</b:Row>
+
+</ui:UiBinder> 
