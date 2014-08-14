@@ -6,6 +6,8 @@ import com.google.gwt.user.client.ui.Widget;
 
 public class ViewKundeSuchen implements View {
 
+	private UILayoutSuchen layout = new UILayoutSuchen();
+
 	public ViewKundeSuchen() {
 		super();
 	}
@@ -13,6 +15,10 @@ public class ViewKundeSuchen implements View {
 	@Override
 	public Widget asWidget() {
 
-		return new UILayoutSuchen();
+		return layout;
+	}
+
+	public UILayoutSuchen getLayout() {
+		return layout;
 	}
 }

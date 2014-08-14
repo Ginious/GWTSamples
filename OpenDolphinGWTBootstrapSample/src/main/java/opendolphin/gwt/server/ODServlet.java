@@ -1,5 +1,6 @@
 package opendolphin.gwt.server;
 
+import opendolphin.gwt.server.command.CommandInit;
 import opendolphin.gwt.server.command.CommandNeu;
 import opendolphin.gwt.server.command.CommandSuchen;
 import opendolphin.gwt.server.command.CommandZuruecksetzen;
@@ -19,6 +20,7 @@ public class ODServlet extends DolphinServlet {
 	@Override
 	protected void registerApplicationActions(ServerDolphin inServerDolphin) {
 
+		inServerDolphin.register(new CommandInit());
 		inServerDolphin.register(new CommandNeu());
 		inServerDolphin.register(new CommandZuruecksetzen());
 		inServerDolphin.register(new CommandSuchen());

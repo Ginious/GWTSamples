@@ -12,18 +12,24 @@
 	<b:Column size="12">
 		<b:Row addStyleNames="{style.content}">
 			<b:Column size="1">
-				<b:Label text="Feld A" />
+				<b:Label ui:field="lblName" />
 			</b:Column>
 			<b:Column size="3">
-				<b:TextBox placeholder="Feld A ..." />
+				<b:TextBox ui:field="txtName" />
 			</b:Column>
 		</b:Row>
 		<b:Row addStyleNames="{style.content}">
 			<b:Column size="1">
-				<b:Label text="Feld B" />
+				<b:Label ui:field="lblVorname" />
 			</b:Column>
 			<b:Column size="3">
-				<b:TextBox placeholder="Feld B ..." />
+				<b:TextBox ui:field="txtVorname" />
+			</b:Column>
+		</b:Row>
+		<b:Row>
+			<b:Column size="12">
+				<b:Button ui:field="btnSuchen" type="PRIMARY" block="true" />
+				<b:Button ui:field="btnZuruecksetzen" block="true" />
 			</b:Column>
 		</b:Row>
 	</b:Column>

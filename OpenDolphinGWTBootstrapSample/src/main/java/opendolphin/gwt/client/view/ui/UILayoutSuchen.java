@@ -16,17 +16,40 @@ public class UILayoutSuchen extends Composite {
 
 	private static Binder UIBINDER = GWT.create(Binder.class);
 
-	@UiField
-	Row rowSearch;
+	public static Binder getUIBINDER() {
+		return UIBINDER;
+	}
 	@UiField
 	Column colDetails;
+	
+	private UIDetail detail = new UIDetail();
+	@UiField
+	Row rowSearch;
+
+	private UISuche suche = new UISuche();
 
 	public UILayoutSuchen() {
 		super();
 
 		initWidget(UIBINDER.createAndBindUi(this));
 
-		rowSearch.add(new UISuche());
-		colDetails.add(new UIDetail());
+		rowSearch.add(suche);
+		colDetails.add(detail);
+	}
+
+	public Column getColDetails() {
+		return colDetails;
+	}
+
+	public UIDetail getDetail() {
+		return detail;
+	}
+
+	public Row getRowSearch() {
+		return rowSearch;
+	}
+
+	public UISuche getSuche() {
+		return suche;
 	}
 }

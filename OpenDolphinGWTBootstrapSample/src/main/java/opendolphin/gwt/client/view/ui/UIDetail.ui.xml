@@ -1,6 +1,7 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
-	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:d="urn:import:com.google.gwt.user.datepicker.client"
+	xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
 
 	<ui:style>
 	.content {
@@ -22,30 +23,67 @@
 	</ui:style>
 
 	<b:Column size="6" addStyleNames="{style.details}">
+
 		<b:Row addStyleNames="{style.content}">
 			<b:Column size="1">
-				<b:Label text="Feld A" />
+				<b:Label ui:field="lblAnrede" />
 			</b:Column>
 			<b:Column size="3">
-				<b:TextBox placeholder="Feld A ..." />
+				<b:ListBox ui:field="lstAnrede" />
 			</b:Column>
 		</b:Row>
+
 		<b:Row addStyleNames="{style.content}">
 			<b:Column size="1">
-				<b:Label text="Feld B" />
+				<b:Label ui:field="lblName" />
 			</b:Column>
 			<b:Column size="3">
-				<b:TextBox placeholder="Feld B ..." />
+				<b:TextBox ui:field="txtName" />
 			</b:Column>
 		</b:Row>
+
 		<b:Row addStyleNames="{style.content}">
 			<b:Column size="1">
-				<b:Label text="Feld C" />
+				<b:Label ui:field="lblVorname" />
 			</b:Column>
 			<b:Column size="3">
-				<b:TextBox placeholder="Feld C ..." />
+				<b:TextBox ui:field="txtVorname" />
 			</b:Column>
 		</b:Row>
+
+		<b:Row addStyleNames="{style.content} ">
+			<b:Column size="1">
+				<b:Label ui:field="lblGeburtsdatum" />
+			</b:Column>
+			<b:Column size="3">
+				<d:DateBox ui:field="datGeburtsdatum" />
+			</b:Column>
+		</b:Row>
+
+		<b:Row addStyleNames="{style.content}">
+			<b:Column size="1">
+				<b:Label ui:field="lblGeschlecht" />
+			</b:Column>
+			<b:Column size="3">
+				<b:ListBox ui:field="lstGeschlecht" />
+			</b:Column>
+		</b:Row>
+
+		<b:Row addStyleNames="{style.content}">
+			<b:Column size="1">
+				<b:Label ui:field="lblZivilstand" />
+			</b:Column>
+			<b:Column size="3">
+				<b:ListBox ui:field="lstZivilstand" />
+			</b:Column>
+		</b:Row>
+
+		<b:Row addStyleNames="{style.content}">
+			<b:Column size="5">
+				<b:Button ui:field="btnNeu" block="true" />
+			</b:Column>
+		</b:Row>
+		
 	</b:Column>
 
 </ui:UiBinder> 
