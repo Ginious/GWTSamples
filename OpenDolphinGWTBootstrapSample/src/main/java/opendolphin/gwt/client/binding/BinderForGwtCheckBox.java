@@ -15,12 +15,12 @@ import com.google.gwt.user.client.ui.CheckBox;
  * Inherit this class in order to implement bindings for more specific check box
  * widgets like e.g. the check box widget of GWT Bootstrap.
  */
-public final class BinderForGwtCheckBox {
+class BinderForGwtCheckBox {
 
 	/**
 	 * 
 	 */
-	protected BinderForGwtCheckBox() {
+	BinderForGwtCheckBox() {
 		super();
 	}
 
@@ -35,7 +35,7 @@ public final class BinderForGwtCheckBox {
 	 * @param inAttName
 	 *            The name of the attribute to bind to.
 	 */
-	public final void bind(final CheckBox inCheckBox, final ClientPresentationModel inPm, final String inAttName) {
+	void bind(final CheckBox inCheckBox, final ClientPresentationModel inPm, final String inAttName) {
 
 		// bind all supported tagged values
 		bindTaggedAttribute(inCheckBox, inPm, inAttName, TAG.VALUE);

@@ -13,12 +13,12 @@ import com.google.gwt.user.client.ui.Label;
  * Inherit this class in order to implement bindings for more specific label
  * widgets like e.g. the label widget of GWT Bootstrap.
  */
-public class BinderForGwtLabel {
+class BinderForGwtLabel {
 
 	/**
 	 * Default constructor.
 	 */
-	protected BinderForGwtLabel() {
+	BinderForGwtLabel() {
 		super();
 	}
 
@@ -33,7 +33,7 @@ public class BinderForGwtLabel {
 	 * @param inAttName
 	 *            The name of the attribute to bind to.
 	 */
-	public final void bind(Label inGwtLabel, final ClientPresentationModel inPm, final String inAttName) {
+	void bind(Label inGwtLabel, final ClientPresentationModel inPm, final String inAttName) {
 
 		bindTaggedAttribute(inGwtLabel, inPm, inAttName, TAG.LABEL);
 

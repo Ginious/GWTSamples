@@ -29,7 +29,7 @@ import com.google.gwt.view.client.SingleSelectionModel;
  * Inherit this class in order to implement bindings for more specific table
  * widgets like e.g. the cell table widget of GWT Bootstrap.
  */
-public final class BinderForGwtCellTable {
+class BinderForGwtCellTable {
 
 	/**
 	 * Liste der Tabellendaten, die bewirtschaftet wird.
@@ -45,7 +45,7 @@ public final class BinderForGwtCellTable {
 	/**
 	 * Default Konstruktor.
 	 */
-	protected BinderForGwtCellTable() {
+	BinderForGwtCellTable() {
 		super();
 	}
 
@@ -61,7 +61,7 @@ public final class BinderForGwtCellTable {
 	 *            The ID of the table used for binding.
 	 */
 	@SuppressWarnings("rawtypes")
-	public void bind(CellTable inGwtCellTable, ClientDolphin inClient, String inTableId) {
+	void bind(CellTable inGwtCellTable, ClientDolphin inClient, String inTableId) {
 
 		// Tabelle initialisieren
 		initTableDataChangeListener(inClient, inTableId);

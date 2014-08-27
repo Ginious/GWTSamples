@@ -20,12 +20,12 @@ import com.google.gwt.user.client.ui.Button;
  * Inherit this class in order to implement bindings for more specific button
  * widgets like e.g. the button widget of GWT Bootstrap.
  */
-public class BinderForGwtButton {
+class BinderForGwtButton {
 
 	/**
 	 * Default constructor.
 	 */
-	protected BinderForGwtButton() {
+	BinderForGwtButton() {
 		super();
 	}
 
@@ -51,7 +51,7 @@ public class BinderForGwtButton {
 	 *            side command has been executed or <code>null</code> if the
 	 *            client does not require a command being executed.
 	 */
-	public final void bind(final Button inGwtButton, final ClientDolphin inDolphin, final ClientPresentationModel inPm,
+	void bind(final Button inGwtButton, final ClientDolphin inDolphin, final ClientPresentationModel inPm,
 			final String inAttName, final String inCommandId, final Command inCommandToExec) {
 
 		// bind all supported tagged values
@@ -76,34 +76,6 @@ public class BinderForGwtButton {
 				}
 			});
 		} // if
-
-		bindCustom(inGwtButton, inDolphin, inPm, inAttName, inCommandId, inCommandToExec);
-	}
-
-	/**
-	 * Performs sub class specific binding.
-	 * 
-	 * @param inGwtButton
-	 *            The Button to bind.
-	 * @param inDolphin
-	 *            The server dolphin required for invoking an OpenDolphin
-	 *            command on the server side.
-	 * @param inPm
-	 *            The client presentation model containing the attributes to
-	 *            bind the button to.
-	 * @param inAttName
-	 *            The name of the attribut the button will be bound to (requires
-	 *            following Tags: ENABLED, LABEL, TEXTNR).
-	 * @param inCommandId
-	 *            The ID of the OpenDolphin command to be executed on the server
-	 *            side.
-	 * @param inCommandToExec
-	 *            The optional client side command to be executed when the
-	 *            server side command has been executed.
-	 */
-	protected void bindCustom(final Button inGwtButton, final ClientDolphin inDolphin, final ClientPresentationModel inPm,
-			final String inAttName, final String inCommandId, final Command inCommandToExec) {
-
 	}
 
 	/**
@@ -155,22 +127,5 @@ public class BinderForGwtButton {
 		} else if (TAG.LABEL.equals(inTag)) {
 			inButton.setText(inValue);
 		} // else if
-
-		handleUpdateCustom(inButton, inTag, inValue);
-	}
-
-	/**
-	 * Performs sub class specific binding of the given Label with the given tag
-	 * and value.
-	 * 
-	 * @param inButton
-	 *            The button to update.
-	 * @param inTag
-	 *            The tag for which a change was recognized.
-	 * @param inValue
-	 *            The new value of the changed attribute.
-	 */
-	protected void handleUpdateCustom(Button inButton, String inTag, String inValue) {
-
 	}
 }

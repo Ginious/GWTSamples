@@ -16,12 +16,12 @@ import com.google.gwt.user.client.ui.TextBox;
  * that inherit GWT {@link TextBox} like e.g. the text box widget of GWT
  * Bootstrap.
  */
-public class BinderForGwtTextBox {
+class BinderForGwtTextBox {
 
 	/**
 	 * Default constructor.
 	 */
-	protected BinderForGwtTextBox() {
+	BinderForGwtTextBox() {
 		super();
 	}
 
@@ -36,7 +36,7 @@ public class BinderForGwtTextBox {
 	 * @param inAttName
 	 *            The name of the attribute to bind to.
 	 */
-	public void bind(final TextBox inTextBox, final ClientPresentationModel inPm, final String inAttName) {
+	void bind(final TextBox inTextBox, final ClientPresentationModel inPm, final String inAttName) {
 
 		// bind all supported tagged values
 		bindTaggedAttribute(inTextBox, inPm, inAttName, TAG.VALUE);
