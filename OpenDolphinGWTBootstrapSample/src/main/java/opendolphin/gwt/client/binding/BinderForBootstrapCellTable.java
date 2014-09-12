@@ -13,7 +13,7 @@ import com.canoo.opendolphin.client.gwt.ClientDolphin;
 import com.canoo.opendolphin.client.gwt.ClientPresentationModel;
 import com.canoo.opendolphin.client.gwt.ModelStoreChangeEventType;
 import com.canoo.opendolphin.client.gwt.ModelStoreChangeHandler;
-import com.google.gwt.user.cellview.client.CellTable;
+import com.github.gwtbootstrap.client.ui.CellTable;
 import com.google.gwt.user.cellview.client.Column;
 import com.google.gwt.user.cellview.client.ColumnSortEvent.ListHandler;
 import com.google.gwt.user.cellview.client.TextColumn;
@@ -25,11 +25,8 @@ import com.google.gwt.view.client.SingleSelectionModel;
 
 /**
  * Binder for a common GWT {@link CellTable}.
- * 
- * Inherit this class in order to implement bindings for more specific table
- * widgets like e.g. the cell table widget of GWT Bootstrap.
  */
-class BinderForGwtCellTable {
+class BinderForBootstrapCellTable {
 
 	/**
 	 * Liste der Tabellendaten, die bewirtschaftet wird.
@@ -45,7 +42,7 @@ class BinderForGwtCellTable {
 	/**
 	 * Default Konstruktor.
 	 */
-	BinderForGwtCellTable() {
+	BinderForBootstrapCellTable() {
 		super();
 	}
 

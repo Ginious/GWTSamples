@@ -10,22 +10,19 @@ import com.canoo.opendolphin.client.gwt.ClientAttribute;
 import com.canoo.opendolphin.client.gwt.ClientDolphin;
 import com.canoo.opendolphin.client.gwt.ClientPresentationModel;
 import com.canoo.opendolphin.client.gwt.OnFinishedHandler;
+import com.github.gwtbootstrap.client.ui.Button;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
-import com.google.gwt.user.client.ui.Button;
 
 /**
  * Binder for a common GWT {@link Button}.
- * 
- * Inherit this class in order to implement bindings for more specific button
- * widgets like e.g. the button widget of GWT Bootstrap.
  */
-class BinderForGwtButton {
+class BinderForBootstrapButton {
 
 	/**
 	 * Default constructor.
 	 */
-	BinderForGwtButton() {
+	BinderForBootstrapButton() {
 		super();
 	}
 

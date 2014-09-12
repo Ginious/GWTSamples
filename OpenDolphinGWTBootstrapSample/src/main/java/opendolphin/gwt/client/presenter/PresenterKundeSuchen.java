@@ -2,6 +2,7 @@ package opendolphin.gwt.client.presenter;
 
 import java.util.List;
 
+import opendolphin.gwt.client.binding.Binder;
 import opendolphin.gwt.client.view.View;
 import opendolphin.gwt.client.view.ViewKundeSuchen;
 import opendolphin.gwt.shared.ConstApp.CMD;
@@ -14,6 +15,7 @@ import com.canoo.opendolphin.client.gwt.ClientPresentationModel;
 import com.canoo.opendolphin.client.gwt.OnFinishedHandler;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
+import com.google.gwt.user.client.ui.TextBox;
 
 public class PresenterKundeSuchen extends AbstractPresenter {
 
@@ -36,11 +38,12 @@ public class PresenterKundeSuchen extends AbstractPresenter {
 			public void handlePresentationModels(List<ClientPresentationModel> inListOfPms) {
 
 				ClientPresentationModel aGuiPM = getClientDolphin().findPresentationModelById(PM.GUI);
+				ClientAttribute aCurrAttr = aGuiPM.getAt(GUI.KONTAKT.NAME);
+
 
 				// Label und TextBox "Name"
-				ClientAttribute aCurrAttr = aGuiPM.getAt(GUI.KONTAKT.NAME);
-				view.getLayout().getSuche().getLblName().setText(aCurrAttr.getValue().toString());
-				view.getLayout().getSuche().getTxtName().setPlaceholder(aCurrAttr.getValue().toString());
+				Binder.bind(view.getLayout().getSuche().getLblName(), aGuiPM, GUI.KONTAKT.NAME);
+				Binder.bindTB(view.getLayout().getSuche().getTxtName(), aGuiPM, GUI.KONTAKT.NAME);
 
 				// Label und TextBox "Vorname"
 				aCurrAttr = aGuiPM.getAt(GUI.KONTAKT.VORNAME);

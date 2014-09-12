@@ -5,23 +5,19 @@ import opendolphin.gwt.shared.ConstApp.TAG;
 import com.canoo.opendolphin.client.gwt.AttributeChangeHandler;
 import com.canoo.opendolphin.client.gwt.ClientAttribute;
 import com.canoo.opendolphin.client.gwt.ClientPresentationModel;
+import com.github.gwtbootstrap.client.ui.TextBox;
 import com.google.gwt.event.logical.shared.ValueChangeEvent;
 import com.google.gwt.event.logical.shared.ValueChangeHandler;
-import com.google.gwt.user.client.ui.TextBox;
 
 /**
  * Binder for a common GWT {@link TextBox}.
- * 
- * Inherit this class in order to implement bindings for more specific widgets
- * that inherit GWT {@link TextBox} like e.g. the text box widget of GWT
- * Bootstrap.
  */
-class BinderForGwtTextBox {
+class BinderForBootstrapTextBox {
 
 	/**
 	 * Default constructor.
 	 */
-	BinderForGwtTextBox() {
+	BinderForBootstrapTextBox() {
 		super();
 	}
 
@@ -50,22 +46,6 @@ class BinderForGwtTextBox {
 				handleChange(inTextBox, inPm, inAttName);
 			}
 		});
-
-		bindCustom(inTextBox, inPm, inAttName);
-	}
-
-	/**
-	 * Performs sub class specific binding.
-	 * 
-	 * @param inTextBox
-	 *            The {@link TextBox} to bind.
-	 * @param inPm
-	 *            The client side presentation model to bind to.
-	 * @param inAttName
-	 *            The name of the attribute to bind to.
-	 */
-	protected void bindCustom(final TextBox inTextBox, final ClientPresentationModel inPm, final String inAttName) {
-
 	}
 
 	/**
@@ -103,18 +83,6 @@ class BinderForGwtTextBox {
 		ClientAttribute attr = inPm.getAt(inAttName + TAG.VALUE);
 		String text = inTextBox.getText();
 		attr.setValue(text);
-
-		handleChangeCustom(inTextBox, inPm, inAttName);
-	}
-
-	/**
-	 * 
-	 * @param inTextBox
-	 * @param inPm
-	 * @param inAttName
-	 */
-	protected void handleChangeCustom(TextBox inTextBox, ClientPresentationModel inPm, String inAttName) {
-
 	}
 
 	protected void handleUpdate(TextBox inTextBox, String inTag, String inValue) {

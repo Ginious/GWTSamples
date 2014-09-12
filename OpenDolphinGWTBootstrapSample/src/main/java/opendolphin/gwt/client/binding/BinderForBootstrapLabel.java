@@ -1,24 +1,21 @@
 package opendolphin.gwt.client.binding;
 
-import opendolphin.gwt.shared.ConstApp.TAG;
+ import opendolphin.gwt.shared.ConstApp.TAG;
 
 import com.canoo.opendolphin.client.gwt.AttributeChangeHandler;
 import com.canoo.opendolphin.client.gwt.ClientAttribute;
 import com.canoo.opendolphin.client.gwt.ClientPresentationModel;
-import com.google.gwt.user.client.ui.Label;
+import com.github.gwtbootstrap.client.ui.Label;
 
 /**
  * Binder for a common GWT {@link Label}.
- * 
- * Inherit this class in order to implement bindings for more specific label
- * widgets like e.g. the label widget of GWT Bootstrap.
  */
-class BinderForGwtLabel {
+class BinderForBootstrapLabel {
 
 	/**
 	 * Default constructor.
 	 */
-	BinderForGwtLabel() {
+	BinderForBootstrapLabel() {
 		super();
 	}
 

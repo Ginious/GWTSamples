@@ -1,26 +1,23 @@
 package opendolphin.gwt.client.binding;
 
-import opendolphin.gwt.shared.ConstApp.TAG;
+ import opendolphin.gwt.shared.ConstApp.TAG;
 
 import com.canoo.opendolphin.client.gwt.AttributeChangeHandler;
 import com.canoo.opendolphin.client.gwt.ClientAttribute;
 import com.canoo.opendolphin.client.gwt.ClientPresentationModel;
+import com.github.gwtbootstrap.client.ui.CheckBox;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
-import com.google.gwt.user.client.ui.CheckBox;
 
 /**
  * Binder for a common GWT {@link CheckBox}.
- * 
- * Inherit this class in order to implement bindings for more specific check box
- * widgets like e.g. the check box widget of GWT Bootstrap.
  */
-class BinderForGwtCheckBox {
+class BinderForBootstrapCheckBox {
 
 	/**
 	 * 
 	 */
-	BinderForGwtCheckBox() {
+	BinderForBootstrapCheckBox() {
 		super();
 	}
 
@@ -49,22 +46,6 @@ class BinderForGwtCheckBox {
 				attr.setValue(String.valueOf(inCheckBox.getValue()));
 			}
 		});
-
-		bindCustom(inCheckBox, inPm, inAttName);
-	}
-
-	/**
-	 * Performs sub class specific binding.
-	 * 
-	 * @param inCheckBox
-	 *            The check box widget to bind.
-	 * @param inPm
-	 *            The client side presentation model to bind to.
-	 * @param inAttName
-	 *            The name of the attribute to bind to.
-	 */
-	protected void bindCustom(CheckBox inCheckBox, final ClientPresentationModel inPm, final String inAttName) {
-
 	}
 
 	/**
@@ -111,22 +92,5 @@ class BinderForGwtCheckBox {
 		} else if (TAG.VALUE.equals(inTag)) {
 			inCheckBox.setValue(Boolean.valueOf(inValue));
 		} // else if
-
-		handleUpdateCustom(inCheckBox, inTag, inValue);
-	}
-
-	/**
-	 * Performs sub class specific binding of the given CheckBox with the given
-	 * tag and value.
-	 * 
-	 * @param inCheckBox
-	 *            The check box widget to update.
-	 * @param inTag
-	 *            The tag for which an update was received.
-	 * @param inValue
-	 *            The new value.
-	 */
-	protected void handleUpdateCustom(CheckBox inCheckBox, String inTag, String inValue) {
-
 	}
 }

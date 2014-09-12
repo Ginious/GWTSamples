@@ -16,10 +16,11 @@ public class UISuche extends Composite {
 	}
 
 	private static Binder UIBINDER = GWT.create(Binder.class);
-	
+
 	public static Binder getUIBINDER() {
 		return UIBINDER;
 	}
+
 	@UiField
 	Button btnSuchen;
 	@UiField
@@ -30,7 +31,7 @@ public class UISuche extends Composite {
 	Label lblVorname;
 	@UiField
 	TextBox txtName;
-	
+
 	@UiField
 	TextBox txtVorname;
 
